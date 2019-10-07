@@ -14,6 +14,7 @@ phases:
     commands:
       - echo Build completed on `date`
       - echo TEST master push 4
+      - aws sts assume-role --role-arn "arn:aws:iam::332325573343:role/test-crossaccount-role-CrossAccountRole-OQG4PFIVPR0M" --role-session-name test
 artifacts:
   files:
     - '**/*'
